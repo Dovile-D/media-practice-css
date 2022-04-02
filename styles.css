@@ -1,91 +1,142 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
 
 * {
-    margin: 0;
-    box-sizing: border-box;
-    
+  margin: 0;
+  box-sizing: border-box;
 }
 
 p {
-    font-family: 'Poppins', sans-serif;
-    font-size: 0.75rem;
-    text-align: justify;
+  font-family: "Poppins", sans-serif;
+  font-size: 0.75rem;
+  text-align: justify;
 }
 
 h1 {
-    font-family: 'Poppins', sans-serif;
-    text-align: center;
+  font-family: "Poppins", sans-serif;
+  text-align: center;
 }
 
 .container {
-    height: 100vh;
-    display: grid;
-    grid-template-rows: 3rem 1fr 1fr 1fr;
-    grid-template-columns: repeat(1, 1fr);
-    gap: 3%;
-    border: 3rem solid white;
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 3rem 1fr 1fr 1fr;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 3%;
+  border: 3rem solid white;
 }
 
-.header {grid-area: 1 / 1 / 2 / 2;}
-
-.chicken {grid-area: 2 / 1 / 3 / 2;
-    background-color: gray;
-    border: 2px solid black;
-    position: relative;
-    padding: 2rem 1rem 1rem 1rem;
+.header {
+  grid-area: 1 / 1 / 2 / 2;
 }
 
-.beef {grid-area: 3 / 1 / 4 / 2;
-    background-color: gray;
-    border: 2px solid black;
-    position: relative;
-    padding: 2rem 1rem 1rem 1rem;
+.chicken {
+  grid-area: 2 / 1 / 3 / 2;
+  background-color: gray;
+  border: 2px solid black;
+  position: relative;
+  padding: 2rem 1rem 1rem 1rem;
 }
 
-.sushi {grid-area: 4 / 1 / 5 / 2;
-    background-color: gray;
-    border: 2px solid black;
-    position: relative;
-    padding: 2rem 1rem 1rem 1rem;
+.beef {
+  grid-area: 3 / 1 / 4 / 2;
+  background-color: gray;
+  border: 2px solid black;
+  position: relative;
+  padding: 2rem 1rem 1rem 1rem;
+}
+
+.sushi {
+  grid-area: 4 / 1 / 5 / 2;
+  background-color: gray;
+  border: 2px solid black;
+  position: relative;
+  padding: 2rem 1rem 1rem 1rem;
+}
+
+.more-text {
+    display: none;
 }
 
 .small-box {
-    position: absolute;
-    top: 0;
-    right: 0;
-    border-left: 2px solid black;
-    border-bottom: 2px solid black;
-    width: 10rem ;
-    text-align: center;
-    font-family: 'Poppins', sans-serif;
-    font-size: 0.75rem;
-    padding: 0.25rem 0 0.25rem 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-left: 2px solid black;
+  border-bottom: 2px solid black;
+  width: 10rem;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  font-size: 0.75rem;
+  padding: 0.25rem 0 0.25rem 0;
 }
 
 .chicken .small-box {
-    background-color: #F4AFAB;
+  background-color: #f4afab;
 }
 
 .beef .small-box {
-    background-color: #982649;
-    color: white;
+  background-color: #982649;
+  color: white;
 }
 
 .sushi .small-box {
-    background-color: #E0D68A;
+  background-color: #e0d68a;
 }
 
 @media (min-width: 768px) {
-    .container {
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: 3rem 1fr 1fr;
-    }
-    
-    .header {grid-area: 1 / 1 / 2 / 3;}
+  .container {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr 4fr 4fr;
+  }
 
-.chicken {grid-area: 2 / 1 / 3 / 2;}
+  .header {
+    grid-area: 1 / 1 / 2 / 3;
+  }
 
-.beef {grid-area: 2 / 2 / 3 / 3;}
+  .chicken {
+    grid-area: 2 / 1 / 3 / 2;
+  }
 
-.sushi {grid-area: 3 / 1 / 4 / 3;}
+  .beef {
+    grid-area: 2 / 2 / 3 / 3;
+  }
+
+  .sushi {
+    grid-area: 3 / 1 / 4 / 3;
+  }
+
+.more-text {
+      display: block;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr 5fr;
+  }
+
+  .header {
+    grid-area: 1 / 1 / 2 / 4;
+    padding: 5rem;
+  }
+
+  .chicken {
+    grid-area: 2 / 1 / 3 / 2;
+    height: 60%;
+  }
+
+  .beef {
+    grid-area: 2 / 2 / 3 / 3;
+    height: 60%;
+  }
+
+  .sushi {
+    grid-area: 2 / 3 / 3 / 4;
+    height: 60%;
+  }
+
+  .more-text {
+      display: none;
+  }
 }
