@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+    
+}
+
+p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.75rem;
+    text-align: justify;
+}
+
+h1 {
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+}
+
+.container {
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 3rem 1fr 1fr 1fr;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 3%;
+    border: 3rem solid white;
+}
+
+.header {grid-area: 1 / 1 / 2 / 2;}
+
+.chicken {grid-area: 2 / 1 / 3 / 2;
+    background-color: gray;
+    border: 2px solid black;
+    position: relative;
+    padding: 2rem 1rem 1rem 1rem;
+}
+
+.beef {grid-area: 3 / 1 / 4 / 2;
+    background-color: gray;
+    border: 2px solid black;
+    position: relative;
+    padding: 2rem 1rem 1rem 1rem;
+}
+
+.sushi {grid-area: 4 / 1 / 5 / 2;
+    background-color: gray;
+    border: 2px solid black;
+    position: relative;
+    padding: 2rem 1rem 1rem 1rem;
+}
+
+.small-box {
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-left: 2px solid black;
+    border-bottom: 2px solid black;
+    width: 30%;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.75rem;
+}
+
+.chicken .small-box {
+    background-color: #F4AFAB;
+}
+
+.beef .small-box {
+    background-color: #982649;
+    color: white;
+}
+
+.sushi .small-box {
+    background-color: #E0D68A;
+}
